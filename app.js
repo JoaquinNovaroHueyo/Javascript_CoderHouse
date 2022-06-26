@@ -29,89 +29,89 @@ console.log(clientes)
 
 
    
-    //Funcion para ingresar nombre del cliente
-    function nombre1(){
-    let nombre1 = (prompt("Usted ha ingresado en la sección de prestamos, ingrese su nombre para continuar"));
-    alert("Gracias por elegirnos" + " " + nombre1)
-    return nombre1
-    }
+//     //Funcion para ingresar nombre del cliente
+//     function nombre1(){
+//     let nombre1 = (prompt("Usted ha ingresado en la sección de prestamos, ingrese su nombre para continuar"));
+//     alert("Gracias por elegirnos" + " " + nombre1)
+//     return nombre1
+//     }
 
-    //Funcion para ingresar DNI del cliente
-    function dni1(){
-        let dni1 = parseInt(prompt("Por favor ingrese su numero de DNI"));
-        alert("El DNI ingresado es" + " " + dni1)
-        return dni1
-        }
+//     //Funcion para ingresar DNI del cliente
+//     function dni1(){
+//         let dni1 = parseInt(prompt("Por favor ingrese su numero de DNI"));
+//         alert("El DNI ingresado es" + " " + dni1)
+//         return dni1
+//         }
 
-    function edad1(){
-            let edad1 = parseInt(prompt("Por favor ingrese su edad"));
-            while(edad1 < 18){
-                alert("Debe ser mayor de edad para solicitar un préstamo")
-                edad1 = parseInt(prompt("Por favor ingrese su edad"));
-            }
-            alert("El dato ingresado es:" + " " + edad1 + " " + "años de edad")
-            return edad1
-    }
+//     function edad1(){
+//             let edad1 = parseInt(prompt("Por favor ingrese su edad"));
+//             while(edad1 < 18){
+//                 alert("Debe ser mayor de edad para solicitar un préstamo")
+//                 edad1 = parseInt(prompt("Por favor ingrese su edad"));
+//             }
+//             alert("El dato ingresado es:" + " " + edad1 + " " + "años de edad")
+//             return edad1
+//     }
 
 
-    //Funcion para ingresar monto del prestamo
-    function cantidad1(){
-        let cantidad1 = parseInt(prompt("A continuación ingrese el monto del prestamo a solicitar"));
-        alert("La cantidad es = " + cantidad1)
-        return cantidad1
-    }
+//     //Funcion para ingresar monto del prestamo
+//     function cantidad1(){
+//         let cantidad1 = parseInt(prompt("A continuación ingrese el monto del prestamo a solicitar"));
+//         alert("La cantidad es = " + cantidad1)
+//         return cantidad1
+//     }
 
-    //Funcion para ingresar cuotas a pagar
-    function cuotas1(){
-        let cuotas1 = parseInt(prompt("En cuantas cuotas quiere pagar, elija de 1 a 12"));
-        while( cuotas1 > 12){
-            alert("Debe elegir una cantidad del 1 al 12")
-            cuotas1 = parseInt(prompt("En cuantas cuotas quiere pagar, elija de 1 a 12"));
-        }
-        alert("Desea el prestamo en " + cuotas1 + " cuotas?")
-        return cuotas1
-    }
+//     //Funcion para ingresar cuotas a pagar
+//     function cuotas1(){
+//         let cuotas1 = parseInt(prompt("En cuantas cuotas quiere pagar, elija de 1 a 12"));
+//         while( cuotas1 > 12){
+//             alert("Debe elegir una cantidad del 1 al 12")
+//             cuotas1 = parseInt(prompt("En cuantas cuotas quiere pagar, elija de 1 a 12"));
+//         }
+//         alert("Desea el prestamo en " + cuotas1 + " cuotas?")
+//         return cuotas1
+//     }
 
-    //Capturar resultado de funciones
-    let nombre = nombre1()
-    let dni = dni1()
-    let edad = edad1()
-    let prestamo = cantidad1()
-    let cuotas = cuotas1()
+//     //Capturar resultado de funciones
+//     let nombre = nombre1()
+//     let dni = dni1()
+//     let edad = edad1()
+//     let prestamo = cantidad1()
+//     let cuotas = cuotas1()
     
    
 
-    //Mostrar resultado de funciones
-    console.log("Nombre del cliente: " + nombre)
-    console.log("DNI del cliente: " + dni)
-    console.log("Edad del cliente: " + edad)
-    console.log("Monto del préstamo: " + prestamo)
-    console.log("Cantidad de cuotas:" + cuotas)
+//     //Mostrar resultado de funciones
+//     console.log("Nombre del cliente: " + nombre)
+//     console.log("DNI del cliente: " + dni)
+//     console.log("Edad del cliente: " + edad)
+//     console.log("Monto del préstamo: " + prestamo)
+//     console.log("Cantidad de cuotas:" + cuotas)
 
-    //Funcion para dividir cantidad en cuotas
-    function dividir(dato1, dato2){
-       let resultado = dato1 / dato2;
-       return resultado
-    }
+//     //Funcion para dividir cantidad en cuotas
+//     function dividir(dato1, dato2){
+//        let resultado = dato1 / dato2;
+//        return resultado
+//     }
 
-    //Capturar cantiddad / cuotas
-    let division = dividir(prestamo, cuotas)
+//     //Capturar cantiddad / cuotas
+//     let division = dividir(prestamo, cuotas)
 
-    //Mostrar resultado
-    console.log("El cliente " + nombre + " de " + edad + " años de edad, DNI: "+ dni + " solicita el préstamo:" + cuotas + " cuotas de " + division)
-    alert("El cliente " + nombre + " de " + edad + " años de edad, DNI: "+ dni + " solicita el préstamo: " + cuotas + " cuotas de " + division)
-
-
-//High order functions
-
-//Busco prestamos mayores a cierto monto de clientes menores a cierta edad
-const prestamosDeRiesgo = clientes.filter ( (el) => {
-    return (el.edad <= 30 && el.prestamo >= 500000)
-})
-
-console.log (prestamosDeRiesgo)
+//     //Mostrar resultado
+//     console.log("El cliente " + nombre + " de " + edad + " años de edad, DNI: "+ dni + " solicita el préstamo:" + cuotas + " cuotas de " + division)
+//     alert("El cliente " + nombre + " de " + edad + " años de edad, DNI: "+ dni + " solicita el préstamo: " + cuotas + " cuotas de " + division)
 
 
-//Quiero saber cual es la mayor cantidad de cuotas posibles
-const cantidadCuotas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-console.log( "La mayor cantidad de cuotas posibles son: " + Math.max(...cantidadCuotas) )
+// //High order functions
+
+// //Busco prestamos mayores a cierto monto de clientes menores a cierta edad
+// const prestamosDeRiesgo = clientes.filter ( (el) => {
+//     return (el.edad <= 30 && el.prestamo >= 500000)
+// })
+
+// console.log (prestamosDeRiesgo)
+
+
+// //Quiero saber cual es la mayor cantidad de cuotas posibles
+// const cantidadCuotas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+// console.log( "La mayor cantidad de cuotas posibles son: " + Math.max(...cantidadCuotas) )
