@@ -1,0 +1,352 @@
+@import url("http://fonts.cdnfonts.com/css/aniron");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+
+
+/** GLOBAL**/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  /* RESET PARA REMS */
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  background: #dcdcdc;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+
+
+
+
+/** NAVEGADOR **/
+
+.navegador{
+  display: flex;
+}
+
+.navegador li {
+  display: flex;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: 2.2rem;
+  margin-right: 2.4rem;
+}
+
+.navegador a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navegador a:hover {
+  color: #13a8a8;
+}
+
+
+
+
+
+
+/** BODY COINTAINER **/
+.body-reset {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+/** LOGO HEADER **/
+
+.logo-pages {
+  display: flex;
+  
+  background-color:#061736;
+  filter: drop-shadow(0 0 0.75rem rgb(255, 217, 0));
+  background: linear-gradient(-45deg, #ee7752, #861e46, #188db8, #013126);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  
+}
+
+.logo-pages img{
+  width: 45%;
+  height: 70%;
+  margin-left: 20px;
+  margin-top: 20px;
+  filter: drop-shadow(0 0 0.75rem rgb(88, 246, 251));
+  
+}
+
+
+
+
+
+/** PAGES HEADER **/
+
+.pages_header {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  filter: drop-shadow(0 0 0.75rem rgb(255, 217, 0));
+  box-shadow: 0px 0px 5px #fff;
+  align-items: center;
+  
+  
+}
+
+
+
+
+
+/** PAGES NAV **/
+
+.social-media{
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 60px;
+  margin-left: 40px;
+}
+
+.social-media-items i{
+  margin-right: 10px;
+  color: white;
+  width: 30px;
+  
+  
+}
+.navegador__paginas{
+  display: flex;
+  justify-content: flex-end;
+}
+.navegador__paginas ul {
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+  .navegador__paginas li {
+    display: flex;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 2.2rem;
+    margin-right: 1rem;
+    margin-right: 5rem;
+  }
+  .navegador__paginas a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .navegador__paginas a:hover {
+    color: #13a8a8;
+  }
+
+
+ 
+
+
+/** PAGES TITLE **/
+.pages-title{
+  
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: xx-large;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  margin-top: 2rem;
+}
+
+
+
+
+
+/** TIENDA **/
+
+.containerCombo{
+  position: relative;
+  width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.containerCombo .cardCombo {
+  width: 100%;
+  background: #fff;
+}
+
+.containerCombo .cardCombo .imgBx {
+  position: relative;
+  width: 100%;
+  height: 310px;
+  overflow: hidden;
+}
+
+.containerCombo .cardCombo .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+  transform-origin: right;
+}
+
+.containerCombo .cardCombo:hover .imgBx img{
+  transform: scale(1.5);
+}
+
+.action {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.action li {
+  position: relative;
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  background: rgb(206, 246, 245);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  cursor: pointer;
+  transition: transform 0.5s;
+  transform: translateX(60px);
+}
+
+.action li:nth-child(2){
+  transition-delay: 0.15s;
+}
+
+.action li:nth-child(3){
+  transition-delay: 0.3s;
+}
+
+.containerCombo .cardCombo:hover .action li {
+  transform: translateX(0px);
+}
+
+.action li:hover {
+  background-color: #fba2a2;
+  color: #fff;
+}
+
+.action li span {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-20px);
+  white-space: nowrap;
+  padding: 4px 60px;
+  background: #1cc61f;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 12px;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transform: 0.5s;
+}
+
+.action li:hover span {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0px);
+}
+
+.action li span::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background: #1cc61f;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.containerCombo .cardCombo .content{
+  padding: 10px;
+}
+
+.containerCombo .cardCombo .content .productName h3{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin: 5px 0;
+}
+
+.containerCombo .cardCombo .content .price_rating{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.containerCombo .cardCombo .content .price_rating h2 {
+  font-size: 20px;
+  color: red;
+  font-weight: 500;
+}
+
+.containerCombo .cardCombo .content .price_rating .fa {
+  color: #ffd513;
+  cursor: pointer;
+}
+
+.containerCombo .cardCombo .content .price_rating .fa.grey {
+  color: #ccc;
+}
+
+
+
+
+
+
+/** KEYFRAMES **/
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
