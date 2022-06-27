@@ -1,31 +1,227 @@
+const productosTienda = [
+    {"id": 1, "nombre": "Combo arco elfico", "img": "./img/products/arco.png", "precio": 1900, "cantidad": 1},
+    {"id": 2, "nombre": "Combo baculo sagrado", "img": "./img/products/baculo.png", "precio": 4650, "cantidad": 1},
+    {"id": 3, "nombre": "Combo casco guerrero", "img": "./img/products/casco1.png", "precio": 7300, "cantidad": 1},
+    {"id": 4, "nombre": "Combo corona Andruil", "img": "./img/products/corona.png", "precio": 10900, "cantidad": 1},
+    {"id": 5, "nombre": "Combo casco Osgiliath", "img": "./img/products/casco2.png", "precio": 9900, "cantidad": 1},
+    {"id": 6, "nombre": "Combo túnica Druida", "img": "./img/products/elf.png", "precio": 8400, "cantidad": 1},
+    {"id": 7, "nombre": "Combo armadura Pantheon", "img": "./img/products/enano.png", "precio": 11500, "cantidad": 1},
+    {"id": 8, "nombre": "Combo espada del Rey", "img": "./img/products/espada1.png", "precio": 8200, "cantidad": 1},
+    {"id": 9, "nombre": "Combo hacha Matagoblin", "img": "./img/products/hacha.png", "precio": 13000, "cantidad": 1},
+    {"id": 10, "nombre": "Combo vestimenta Hobbit", "img": "./img/products/hobbit.png", "precio": 4100, "cantidad": 1},
+    {"id": 11, "nombre": "Combo túnica Gandalf", "img": "./img/products/mago.png", "precio": 7250, "cantidad": 1},
+    {"id": 12, "nombre": "Combo sombrero de mago", "img": "./img/products/sombrero.png", "precio": 1900, "cantidad": 1},
+]
 
-//Constuctor de clientes
 
-class cliente {
-    constructor(id, nombre, dni, edad, prestamo, cuotas){
-        this.id = id
-        this.nombre = nombre
-        this.dni = dni
-        this.edad = edad
-        this.prestamo = prestamo
-        this.cuotas = cuotas
-    }
+
+
+const carrito = []
+
+let total = 0;
+
+function renderizarProductos(){
+
+    let tienda = document.getElementById('tienda');
+
+    productosTienda.forEach((e)=>{
+        
+        let productoHTML = 
+        `<div class="cardCombo">
+        <div class="imgBx">
+            <img src="${e.img}" alt="arco">
+            <ul class="action">
+                <li>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <span>Agregar a Favoritos</span>
+                </li>
+                <li>
+                    <i class="fa fa-shopping-cart" aria-hidden="true" onclick="agregarProductoAlCarrito(${e.id})"></i>
+                    <span>Agregar al Carrito</span>
+                </li>
+                <li>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <span>Ver Detalles</span>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="productName">
+                <h3>${e.nombre}</h3>
+            </div>
+            <div class="price_rating">
+                <h2>${e.precio}</h2>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        `
+        tienda.innerHTML += productoHTML
+    })
 }
 
-const clientes = []
+renderizarProductos()
 
-clientes.push( new cliente('1', 'Manuel', 30231091, 35, 30000, 6))
-clientes.push( new cliente('2', 'Joaquin', 41632641, 25, 70000, 12))
-clientes.push( new cliente('3', 'Ramon', 37232094, 27, 120000, 3))
-clientes.push( new cliente('4', 'Sofia', 21231091, 55, 1500000, 5))
-clientes.push( new cliente('5', 'Maria', 49891021, 20, 1221000, 9))
-clientes.push( new cliente('6', 'Juan', 1133068, 75, 65000, 2))
-clientes.push( new cliente('7', 'Josefina', 27095437, 44, 350000, 10))
-clientes.push( new cliente('8', 'Sebastian', 34987456, 29, 535000, 12))
-clientes.push( new cliente('9', 'Camila', 27234999, 37, 96000, 6))
-clientes.push( new cliente('10', 'Changuito', 990121, 97, 12430000, 1))
+function agregarProductoAlCarrito(id){
 
-console.log(clientes)
+
+    let producto = productosTienda.find(producto => producto.id == id)
+
+    let productoEnCarrito = carrito.find (producto => producto.id == id)
+
+    if(productoEnCarrito){
+        productoEnCarrito.cantidad++
+    } else {
+        producto.cantidad = 1
+        carrito.push(producto)
+    }
+    renderizarCarrito()
+
+}
+
+
+function renderizarCarrito(){
+
+    let carritoHTML = document.getElementById('carrito');
+
+    html = '';
+
+    carrito.forEach((producto, id)=>{
+        
+        html +=`
+        <div class="cardCombo">
+        <div class="imgBx">
+            <img src="${producto.img}" alt="arco">
+            <ul class="action">
+                <li>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <span>Agregar a Favoritos</span>
+                </li>
+                <li>
+                    <i class="fa fa-shopping-cart" aria-hidden="true" onclick="agregarProductoAlCarrito(${producto.id})"></i>
+                    <span>Agregar al Carrito</span>
+                </li>
+                <li>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <span>Ver Detalles</span>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="productName">
+                <h3>${producto.nombre}</h3>
+            </div>
+            <div class="price_rating">
+                <h2>${producto.precio}</h2>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+            </div>
+            <button class="btn btn-danger" onclick="eliminarProductoDelCarrito(${id})">Eliminar</button>
+        </div>
+    </div>
+
+        `
+    })
+
+    carritoHTML.innerHTML = html;
+
+    calcularTotal()
+}
+
+function calcularTotal(){
+
+    carrito.forEach((producto) => {
+        
+        total += producto.precio * producto.cantidad;
+    });
+    
+    console.log(total);
+
+}
+
+
+const eliminarProductoDelCarrito = (id)=> {
+
+    console.log(carrito[id].cantidad); //1
+    carrito[id].cantidad--;
+    console.log(carrito[id].cantidad); 
+
+    if(carrito[id].cantidad == 0){
+        
+        carrito.splice(id, 1);
+    }
+    
+    renderizarCarrito();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //Constuctor de clientes
+
+// class cliente {
+//     constructor(id, nombre, dni, edad, prestamo, cuotas){
+//         this.id = id
+//         this.nombre = nombre
+//         this.dni = dni
+//         this.edad = edad
+//         this.prestamo = prestamo
+//         this.cuotas = cuotas
+//     }
+// }
+
+// const clientes = []
+
+// clientes.push( new cliente('1', 'Manuel', 30231091, 35, 30000, 6))
+// clientes.push( new cliente('2', 'Joaquin', 41632641, 25, 70000, 12))
+// clientes.push( new cliente('3', 'Ramon', 37232094, 27, 120000, 3))
+// clientes.push( new cliente('4', 'Sofia', 21231091, 55, 1500000, 5))
+// clientes.push( new cliente('5', 'Maria', 49891021, 20, 1221000, 9))
+// clientes.push( new cliente('6', 'Juan', 1133068, 75, 65000, 2))
+// clientes.push( new cliente('7', 'Josefina', 27095437, 44, 350000, 10))
+// clientes.push( new cliente('8', 'Sebastian', 34987456, 29, 535000, 12))
+// clientes.push( new cliente('9', 'Camila', 27234999, 37, 96000, 6))
+// clientes.push( new cliente('10', 'Changuito', 990121, 97, 12430000, 1))
+
+// console.log(clientes)
 
 
    

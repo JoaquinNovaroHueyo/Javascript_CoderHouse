@@ -5,7 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+    <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <meta name="description" content="Cervezas Middle Earth" />
@@ -13,6 +16,7 @@
     <title>¡Combos especiales!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <script defer src="modal.js"></script>
     <script defer src="app.js"></script>
   </head>
 
@@ -82,428 +86,36 @@
 
     <!-- eCommerce section -->
     <main>
-        <section class="containerCombo">
-            <div class="cardCombo">
-                <div class="imgBx">
-                    <img src="./img/products/arco.png" alt="arco">
-                    <ul class="action">
-                        <li>
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            <span>Agregar a Favoritos</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <span>Agregar al Carrito</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-eye" aria-hidden="true"></i>
-                            <span>Ver Detalles</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content">
-                    <div class="productName">
-                        <h3>Combo arco élfico</h3>
-                    </div>
-                    <div class="price_rating">
-                        <h2>$1.900</h2>
-                        <div class="rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cardCombo">
-                <div class="imgBx">
-                    <img src="./img/products/baculo.png" alt="baculo">
-                    <ul class="action">
-                        <li>
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            <span>Agregar a Favoritos</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <span>Agregar al Carrito</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-eye" aria-hidden="true"></i>
-                            <span>Ver Detalles</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content">
-                    <div class="productName">
-                        <h3>Combo báculo sagrado</h3>
-                    </div>
-                    <div class="price_rating">
-                        <h2>$4.650</h2>
-                        <div class="rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cardCombo">
-                <div class="imgBx">
-                    <img src="./img/products/casco1.png" alt="casco">
-                    <ul class="action">
-                        <li>
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            <span>Agregar a Favoritos</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <span>Agregar al Carrito</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-eye" aria-hidden="true"></i>
-                            <span>Ver Detalles</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content">
-                    <div class="productName">
-                        <h3>Combo casco guerrero</h3>
-                    </div>
-                    <div class="price_rating">
-                        <h2>$7.300</h2>
-                        <div class="rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cardCombo">
-                <div class="imgBx">
-                    <img src="./img/products/corona.png" alt="arco">
-                    <ul class="action">
-                        <li>
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            <span>Agregar a Favoritos</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <span>Agregar al Carrito</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-eye" aria-hidden="true"></i>
-                            <span>Ver Detalles</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content">
-                    <div class="productName">
-                        <h3>Combo corona Andruil</h3>
-                    </div>
-                    <div class="price_rating">
-                        <h2>$10.900</h2>
-                        <div class="rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cardCombo">
-                <div class="imgBx">
-                    <img src="./img/products/casco2.png" alt="arco">
-                    <ul class="action">
-                        <li>
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            <span>Agregar a Favoritos</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <span>Agregar al Carrito</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-eye" aria-hidden="true"></i>
-                            <span>Ver Detalles</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content">
-                    <div class="productName">
-                        <h3>Combo casco Osgiliath</h3>
-                    </div>
-                    <div class="price_rating">
-                        <h2>$9.900</h2>
-                        <div class="rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cardCombo">
-                <div class="imgBx">
-                    <img src="./img/products/elf.png" alt="arco">
-                    <ul class="action">
-                        <li>
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            <span>Agregar a Favoritos</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <span>Agregar al Carrito</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-eye" aria-hidden="true"></i>
-                            <span>Ver Detalles</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content">
-                    <div class="productName">
-                        <h3>Combo túnica Druida</h3>
-                    </div>
-                    <div class="price_rating">
-                        <h2>$8.400</h2>
-                        <div class="rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cardCombo">
-                <div class="imgBx">
-                    <img src="./img/products/enano.png" alt="arco">
-                    <ul class="action">
-                        <li>
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            <span>Agregar a Favoritos</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <span>Agregar al Carrito</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-eye" aria-hidden="true"></i>
-                            <span>Ver Detalles</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content">
-                    <div class="productName">
-                        <h3>Combo armadura Pantheon</h3>
-                    </div>
-                    <div class="price_rating">
-                        <h2>$11.500</h2>
-                        <div class="rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cardCombo">
-                <div class="imgBx">
-                    <img src="./img/products/espada1.png" alt="arco">
-                    <ul class="action">
-                        <li>
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            <span>Agregar a Favoritos</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <span>Agregar al Carrito</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-eye" aria-hidden="true"></i>
-                            <span>Ver Detalles</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content">
-                    <div class="productName">
-                        <h3>Combo espada del Rey</h3>
-                    </div>
-                    <div class="price_rating">
-                        <h2>$8.200</h2>
-                        <div class="rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cardCombo">
-                <div class="imgBx">
-                    <img src="./img/products/hacha.png" alt="arco">
-                    <ul class="action">
-                        <li>
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            <span>Agregar a Favoritos</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <span>Agregar al Carrito</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-eye" aria-hidden="true"></i>
-                            <span>Ver Detalles</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content">
-                    <div class="productName">
-                        <h3>Combo hacha Matagoblin</h3>
-                    </div>
-                    <div class="price_rating">
-                        <h2>$13.000</h2>
-                        <div class="rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cardCombo">
-                <div class="imgBx">
-                    <img src="./img/products/hobbit.png" alt="arco">
-                    <ul class="action">
-                        <li>
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            <span>Agregar a Favoritos</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <span>Agregar al Carrito</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-eye" aria-hidden="true"></i>
-                            <span>Ver Detalles</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content">
-                    <div class="productName">
-                        <h3>Combo vestimenta Hobbit</h3>
-                    </div>
-                    <div class="price_rating">
-                        <h2>$4.100</h2>
-                        <div class="rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cardCombo">
-                <div class="imgBx">
-                    <img src="./img/products/mago.png" alt="arco">
-                    <ul class="action">
-                        <li>
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            <span>Agregar a Favoritos</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <span>Agregar al Carrito</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-eye" aria-hidden="true"></i>
-                            <span>Ver Detalles</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content">
-                    <div class="productName">
-                        <h3>Combo túnica Gandalf</h3>
-                    </div>
-                    <div class="price_rating">
-                        <h2>$7.250</h2>
-                        <div class="rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cardCombo">
-                <div class="imgBx">
-                    <img src="./img/products/sombrero.png" alt="arco">
-                    <ul class="action">
-                        <li>
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                            <span>Agregar a Favoritos</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <span>Agregar al Carrito</span>
-                        </li>
-                        <li>
-                            <i class="fa fa-eye" aria-hidden="true"></i>
-                            <span>Ver Detalles</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content">
-                    <div class="productName">
-                        <h3>Combo sombrero de mago</h3>
-                    </div>
-                    <div class="price_rating">
-                        <h2>$1.900</h2>
-                        <div class="rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                            <i class="fa grey fa-star" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <section class="containerCombo" id="tienda">
+        
         </section>
+
+        <section>
+            <h1 class="text-center"></h1>
+            <div class="row text-center" id="carrito">
+    
+            </div>
+            <div id="total">
+    
+            </div>
+        </section>
+        <div class="modal-contenedor">
+            <div class="modal-carrito">
+                <h3>Carrito</h3>
+                <button id="carritoCerrar"><i class="fa fa-facebook-official"></i></button>
+                <div id="carrito-contenedor">
+                    <!-- <div class="productoEnCarrito">
+                        <p>Buzo 1</p>
+                        <p>Precio: $1200</p>
+                        <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                    </div> -->
+                </div>
+                <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+                <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+            </div>
+        </div>
+        
+        
     </main>
 
 
@@ -615,10 +227,9 @@
       </div>
       <!-- Copyright -->
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
+    <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
   </body>
 </html>
