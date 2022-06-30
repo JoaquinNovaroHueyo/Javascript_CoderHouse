@@ -152,25 +152,7 @@ const actualizarCarrito = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// PRIMER PROYECTO
 // //Constuctor de clientes
 
 // class cliente {
