@@ -336,17 +336,19 @@ img {
 
 #boton-carrito {
   border: none;
-  color: royalblue;
-  font-size: 40px;
+  color: rgb(0, 75, 75);
+  filter: drop-shadow(0 0 0.75rem rgb(255, 217, 0));
+  font-size: 22px;
   background-color: white;
-  border-radius: 50%;
-  padding: 10px 20px;
+  border-radius: 35%;
+  padding: 0 15px 0 15px;
   transition: all .3s;
+  margin-right: 15px;
 }
 #boton-carrito:hover {
   cursor: pointer;
   color: white;
-  background-color: royalblue;
+  background-color: rgb(5, 69, 112);
 }
 #boton-carrito:focus {
   outline: none;
@@ -374,12 +376,14 @@ p {
   font-weight: 700;
 }
 .boton-agregar {
-  background-color: royalblue;
+  background-color: rgb(200, 97, 248);
   color: white;
   font-size: 18px;
   font-weight: 700;
   padding: 5px;
   border: none;
+  border-radius: 5px;
+  padding: 0px 10px 0 10px;
 }
 .boton-agregar:hover {
   cursor: pointer;
